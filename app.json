@@ -1,0 +1,54 @@
+{
+  "name": "squadbid_customer_app",
+  "slug": "squadbid_customer_app",
+  "scheme": "squadbid-customer-scheme",
+  "plugins": [
+    "expo-router"
+  ],
+  "ewArchEnabled": true,
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.squadbid.customer",
+    "googleServicesFile": "./GoogleServices.plist"
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
+    },
+    "googleServicesFile": "./path/to/google-services.json"
+  },
+  "web": {
+    "favicon": "./assets/favicon.png",
+    "pwa": {
+      "name": "SquadBid Customer",
+      "short_name": "SquadBid",
+      "start_url": ".",
+      "background_color": "#ffffff",
+      "theme_color": "#388e3c",
+      "display": "standalone",
+      "icons": [
+        {
+          "src": "./assets/pwa-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "./assets/pwa-icon-512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    },
+    "expo": {
+      "plugins": [
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "Allow SquadBid to use your location."
+          }
+        ]
+      ]
+    }
+  }
+}
